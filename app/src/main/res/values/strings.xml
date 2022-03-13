@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">Tips Friend</string>
+  <!-- Strings used for fragments for navigation -->
+  <string name="tips_friend">TipsFriend</string>
+
+  <string name="tip_percent">Tip %</string>
+  <string name="bill">Bill</string>
+  <string name="total_amount">Total Amount</string>
+  <string name="tip_amount">Tip Amount</string>
+</resources>

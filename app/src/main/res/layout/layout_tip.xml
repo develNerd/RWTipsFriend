@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 Razeware LLC
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+  ~ distribute, sublicense, create a derivative work, and/or sell copies of the
+  ~ Software in any work that is designed, intended, or marketed for pedagogical or
+  ~ instructional purposes related to programming, coding, application development,
+  ~ or information technology.  Permission for such use, copying, modification,
+  ~ merger, publication, distribution, sublicensing, creation of derivative works,
+  ~ or sale is expressly withheld.
+  ~
+  ~ This project and source code may use libraries or frameworks that are
+  ~ released under various Open-Source licenses. Use of those libraries and
+  ~ frameworks are governed by their own individual licenses.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/bill"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/bill">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/billInput"
+        android:layout_width="match_parent"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tipPercent"
+      app:layout_constraintTop_toBottomOf="@+id/bill"
+      android:layout_marginTop="@dimen/text_fields_margin_top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/tip_percent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tipPercentInput"
+        android:layout_width="match_parent"
+        android:maxLength="3"
+        android:inputType="number"
+        android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tipAmount"
+      app:layout_constraintTop_toBottomOf="@+id/tipPercent"
+      android:layout_marginTop="@dimen/text_fields_margin_top"
+      android:layout_width="match_parent"
+      android:enabled="false"
+      android:layout_height="wrap_content"
+      android:hint="@string/tip_amount">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tipAmountInput"
+        android:layout_width="match_parent"
+        android:inputType="none"
+        android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/totalAmount"
+      app:layout_constraintTop_toBottomOf="@+id/tipAmount"
+      android:layout_marginTop="@dimen/text_fields_margin_top"
+      android:layout_width="match_parent"
+      android:enabled="false"
+      android:layout_height="wrap_content"
+      android:hint="@string/total_amount">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:inputType="none"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/totalAmountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
