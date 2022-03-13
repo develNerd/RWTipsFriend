@@ -70,28 +70,12 @@ class MainActivity : AppCompatActivity() {
     binding.layoutTip.apply {
 
       tipPercentInput.doOnTextChanged { text, _, _, _ ->
-        tipsViewModel.setTipPercent(text.toString().toDouble())
       }
 
       billInput.doOnTextChanged { text, _, _, _ ->
-        tipsViewModel.setBillAmount(text.toString().toDouble())
       }
     }
 
-    lifecycleScope.launch {
-      combine(tipsViewModel.bill,tipsViewModel.tipPercent){_bill,_tip ->
-        (_tip / HUNDRED) * _bill
-      }.collect {answer ->
-        binding.layoutTip.apply {
-          tipAmountInput.setText(answer.toOneDecimalPlace())
-          val totalAmount = answer +  tipsViewModel.bill.value
-          totalAmountInput.setText(totalAmount.toOneDecimalPlace())
-        }
-
-      }
-
-
-    }
 
 
   }
@@ -100,4 +84,6 @@ class MainActivity : AppCompatActivity() {
 fun Double.toOneDecimalPlace():String{
   return String.format("%.1f", this)
 }
+
+const val HUNDRED = 100.0
 

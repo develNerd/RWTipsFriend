@@ -45,28 +45,10 @@ import javax.xml.transform.dom.DOMLocator
  * Created on 3/12/2022 10:33 PM
  */
 
-const val HUNDRED = 100.0
 
 class CalculateTipViewModel : ViewModel() {
 
-  private val _bill = MutableStateFlow(0.0)
-  val bill: StateFlow<Double>
-    get() = _bill
-
-  /**
-   * Function to set BillAmount
-   * */
-  fun setBillAmount(amount:Double){
-    _bill.value = amount
-  }
-
-  private val _tipPercent = MutableStateFlow(0.0)
-  val tipPercent: StateFlow<Double>
-    get() = _tipPercent
-
-  fun setTipPercent(tipPercent:Double){
-    _tipPercent.value =tipPercent
-  }
+ //Code Here
 
 
 
