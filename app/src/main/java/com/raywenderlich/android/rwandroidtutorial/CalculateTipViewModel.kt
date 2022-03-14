@@ -39,7 +39,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 
-const val HUNDRED = 100.0
 
 class CalculateTipViewModel : ViewModel() {
 

@@ -45,6 +45,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
+const val HUNDRED = 100.0
 
 class MainActivity : AppCompatActivity() {
 
