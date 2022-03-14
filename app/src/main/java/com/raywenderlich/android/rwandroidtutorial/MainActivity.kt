@@ -45,6 +45,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
+const val HUNDRED = 100.0
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,23 +67,13 @@ class MainActivity : AppCompatActivity() {
 
     // Your code
 
-    binding.layoutTip.apply {
 
-      tipPercentInput.doOnTextChanged { text, _, _, _ ->
-      }
-
-      billInput.doOnTextChanged { text, _, _, _ ->
-      }
-    }
 
 
 
   }
 }
 
-fun Double.toOneDecimalPlace():String{
-  return String.format("%.1f", this)
-}
 
-const val HUNDRED = 100.0
+
 
