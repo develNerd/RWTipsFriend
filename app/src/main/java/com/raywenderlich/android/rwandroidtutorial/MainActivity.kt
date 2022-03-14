@@ -45,9 +45,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
-/**
- * Main Screen
- */
+
 class MainActivity : AppCompatActivity() {
 
   private lateinit var binding: ActivityMainBinding

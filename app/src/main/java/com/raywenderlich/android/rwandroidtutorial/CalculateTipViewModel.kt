@@ -40,10 +40,6 @@ import kotlinx.coroutines.flow.*
 import java.lang.Exception
 import javax.xml.transform.dom.DOMLocator
 
-/**
- * @author Isaac Akakpo
- * Created on 3/12/2022 10:33 PM
- */
 
 
 class CalculateTipViewModel : ViewModel() {
