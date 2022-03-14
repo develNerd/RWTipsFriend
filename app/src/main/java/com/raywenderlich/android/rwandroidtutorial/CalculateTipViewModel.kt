@@ -38,8 +38,6 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.*
 import java.lang.Exception
-import javax.xml.transform.dom.DOMLocator
-
 
 
 class CalculateTipViewModel : ViewModel() {
