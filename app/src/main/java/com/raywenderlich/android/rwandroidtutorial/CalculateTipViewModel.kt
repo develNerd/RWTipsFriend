@@ -34,16 +34,10 @@
 
 package com.raywenderlich.android.rwandroidtutorial
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
-import kotlinx.coroutines.flow.*
-import java.lang.Exception
-import javax.xml.transform.dom.DOMLocator
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 
-/**
- * @author Isaac Akakpo
- * Created on 3/12/2022 10:33 PM
- */
 
 const val HUNDRED = 100.0
 

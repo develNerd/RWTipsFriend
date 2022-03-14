@@ -45,9 +45,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
-/**
- * Main Screen
- */
+
 class MainActivity : AppCompatActivity() {
 
   private lateinit var binding: ActivityMainBinding
@@ -60,10 +58,9 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     binding = ActivityMainBinding.inflate(layoutInflater)
     setContentView(binding.root)
-    supportActionBar?.title =resources.getString(R.string.app_name)
+    supportActionBar?.title = resources.getString(R.string.app_name)
 
-    val tipsViewModel:CalculateTipViewModel by viewModels()
-
+    val tipsViewModel: CalculateTipViewModel by viewModels()
 
     // Your code
 
@@ -79,17 +76,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     lifecycleScope.launch {
-      combine(tipsViewModel.bill,tipsViewModel.tipPercent){_bill,_tip ->
+      combine(tipsViewModel.bill, tipsViewModel.tipPercent) { _bill, _tip ->
         (_tip / HUNDRED) * _bill
-      }.collect {answer ->
+      }.collect { tipAmount ->
         binding.layoutTip.apply {
-          tipAmountInput.setText(answer.toOneDecimalPlace())
-          val totalAmount = answer +  tipsViewModel.bill.value
+          tipAmountInput.setText(tipAmount.toOneDecimalPlace())
+          val totalAmount = tipAmount + tipsViewModel.bill.value
           totalAmountInput.setText(totalAmount.toOneDecimalPlace())
         }
 
       }
-
 
     }
 
@@ -97,7 +93,7 @@ class MainActivity : AppCompatActivity() {
   }
 }
 
-fun Double.toOneDecimalPlace():String{
+fun Double.toOneDecimalPlace(): String {
   return String.format("%.1f", this)
 }
 
